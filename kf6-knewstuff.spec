@@ -63,6 +63,7 @@ Requires:	kf6-kservice >= %{version}
 Requires:	kf6-ktextwidgets >= %{version}
 Requires:	kf6-kwidgetsaddons >= %{version}
 Requires:	kf6-kxmlgui >= %{version}
+Obsoletes:	kf5-%{kfname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt6dir		%{_libdir}/qt6
@@ -83,6 +84,7 @@ Requires:	cmake >= 3.16
 Requires:	kf6-attica-devel >= %{version}
 Requires:	kf6-kservice-devel >= %{version}
 Requires:	kf6-kxmlgui-devel >= %{version}
+Obsoletes:	kf5-%{kfname}-devel < %{version}
 
 %description devel
 Header files for %{kfname} development.
