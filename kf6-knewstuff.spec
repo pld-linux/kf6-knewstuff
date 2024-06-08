@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.2
+%define		kdeframever	6.3
 %define		qtver	5.15.2
 %define		kfname	knewstuff
 
 Summary:	Framework for downloading and sharing additional application data
 Name:		kf6-%{kfname}
-Version:	6.2.0
+Version:	6.3.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	6e58427136c3519fec44334098f25067
+# Source0-md5:	61ce2e84aaa27439b9b06bf359825f0f
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -63,7 +63,7 @@ Requires:	kf6-kservice >= %{version}
 Requires:	kf6-ktextwidgets >= %{version}
 Requires:	kf6-kwidgetsaddons >= %{version}
 Requires:	kf6-kxmlgui >= %{version}
-Obsoletes:	kf5-%{kfname} < %{version}
+#Obsoletes:	kf5-%{kfname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt6dir		%{_libdir}/qt6
@@ -84,7 +84,7 @@ Requires:	cmake >= 3.16
 Requires:	kf6-attica-devel >= %{version}
 Requires:	kf6-kservice-devel >= %{version}
 Requires:	kf6-kxmlgui-devel >= %{version}
-Obsoletes:	kf5-%{kfname}-devel < %{version}
+#Obsoletes:	kf5-%{kfname}-devel < %{version}
 
 %description devel
 Header files for %{kfname} development.
