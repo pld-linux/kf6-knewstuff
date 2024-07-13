@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.3
+%define		kdeframever	6.4
 %define		qtver	5.15.2
 %define		kfname	knewstuff
 
 Summary:	Framework for downloading and sharing additional application data
 Name:		kf6-%{kfname}
-Version:	6.3.0
+Version:	6.4.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	61ce2e84aaa27439b9b06bf359825f0f
+# Source0-md5:	fdf8296b115b07672ba790c44849805b
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -151,7 +151,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/qt6/qml/org/kde/newstuff/private/entrygriddelegates
 %{_libdir}/qt6/qml/org/kde/newstuff/private/entrygriddelegates/BigPreviewDelegate.qml
 %{_libdir}/qt6/qml/org/kde/newstuff/private/entrygriddelegates/FeedbackOverlay.qml
-%{_libdir}/qt6/qml/org/kde/newstuff/private/entrygriddelegates/ThumbDelegate.qml
 %{_libdir}/qt6/qml/org/kde/newstuff/private/entrygriddelegates/TileDelegate.qml
 %{_libdir}/qt6/qml/org/kde/newstuff/qmldir
 %{_datadir}/qlogging-categories6/knewstuff.renamecategories
