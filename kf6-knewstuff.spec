@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.5
+%define		kdeframever	6.6
 %define		qtver	5.15.2
 %define		kfname	knewstuff
 
 Summary:	Framework for downloading and sharing additional application data
 Name:		kf6-%{kfname}
-Version:	6.5.0
+Version:	6.6.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	a6d662cf3920c575bb2fb7541c33f691
+# Source0-md5:	9ae981d2f24dd04a46d56da68146f22a
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -159,6 +159,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/qml/org/kde/newstuff/kde-qmlmodule.version
 %{_libdir}/qt6/qml/org/kde/newstuff/newstuffqmlplugin.qmltypes
 %{_desktopdir}/org.kde.knewstuff-dialog6.desktop
+%{_libdir}/qt6/qml/org/kde/newstuff/private/kde-qmlmodule.version
+%{_libdir}/qt6/qml/org/kde/newstuff/private/libnewstuffqmlpluginprivate.so
+%{_libdir}/qt6/qml/org/kde/newstuff/private/newstuffqmlpluginprivate.qmltypes
+%{_libdir}/qt6/qml/org/kde/newstuff/private/qmldir
 
 
 %files devel
