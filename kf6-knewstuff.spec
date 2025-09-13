@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.17
+%define		kdeframever	6.18
 %define		qtver	5.15.2
 %define		kfname	knewstuff
 
 Summary:	Framework for downloading and sharing additional application data
 Name:		kf6-%{kfname}
-Version:	6.17.0
+Version:	6.18.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	3315f351aac4fd66d1be6783d25f767b
+# Source0-md5:	8831418d504708171565b120990eec8a
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -65,6 +65,7 @@ Requires:	kf6-ktextwidgets >= %{version}
 Requires:	kf6-kwidgetsaddons >= %{version}
 Requires:	kf6-kxmlgui >= %{version}
 #Obsoletes:	kf5-%{kfname} < %{version}
+%requires_eq_to Qt6Core Qt6Core-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt6dir		%{_libdir}/qt6
