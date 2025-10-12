@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.18
+%define		kdeframever	6.19
 %define		qtver	5.15.2
 %define		kfname	knewstuff
 
 Summary:	Framework for downloading and sharing additional application data
 Name:		kf6-%{kfname}
-Version:	6.18.0
+Version:	6.19.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	8831418d504708171565b120990eec8a
+# Source0-md5:	2f2513ffdcaf95bd8508c75341e2608a
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -131,9 +131,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md
 %ghost %{_libdir}/libKF6NewStuffCore.so.6
-%attr(755,root,root) %{_libdir}/libKF6NewStuffCore.so.*.*
+%{_libdir}/libKF6NewStuffCore.so.*.*
 %ghost %{_libdir}/libKF6NewStuffWidgets.so.6
-%attr(755,root,root) %{_libdir}/libKF6NewStuffWidgets.so.*.*
+%{_libdir}/libKF6NewStuffWidgets.so.*.*
 %{_datadir}/qlogging-categories6/knewstuff.categories
 %{_libdir}/qt6/qml/org/kde/newstuff/libnewstuffqmlplugin.so
 %dir %{_libdir}/qt6/qml/org/kde/newstuff
@@ -162,7 +162,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/qml/org/kde/newstuff/qmldir
 %{_datadir}/qlogging-categories6/knewstuff.renamecategories
 %attr(755,root,root) %{_bindir}/knewstuff-dialog6
-%attr(755,root,root) %{_libdir}/qt6/plugins/designer/knewstuff6widgets.so
+%{_libdir}/qt6/plugins/designer/knewstuff6widgets.so
 %{_libdir}/qt6/qml/org/kde/newstuff/kde-qmlmodule.version
 %{_libdir}/qt6/qml/org/kde/newstuff/newstuffqmlplugin.qmltypes
 %{_desktopdir}/org.kde.knewstuff-dialog6.desktop
