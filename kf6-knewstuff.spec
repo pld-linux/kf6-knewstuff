@@ -75,6 +75,11 @@ The KNewStuff library implements collaborative data sharing for
 applications. It uses libattica to support the Open Collaboration
 Services specification.
 
+%description -l pl.UTF-8
+Biblioteka KNewStuff implementuje współdzielenie danych pomiędzy
+współpracującymi aplikacjami. Używa szkieletu attica do wsparcia dla
+specyfikacji Open Collaboration Services.
+
 %package devel
 Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
